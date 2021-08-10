@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Calc</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-6 mx-auto">
+                <div class="form-group">
+                    <label for="num1">Num 1</label>
+                    <input class="form-control" type="number" id="num1">
+                </div>
+                <div class="form-group">
+                    <label for="num2">Num 2</label>
+                    <input class="form-control" type="number" id="num2">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 mx-auto">
+                <button onclick="sumar()" class="btn btn-primary">+ Sumar</button>
+                <button onclick="restar()" class="btn btn-info">- Restar</button>
+                <button onclick="multi()" class="btn btn-warning">x Multiplicar</button>
+                <button onclick="divi()" class="btn btn-success">/ Dividir</button>
+                <button onclick="par()" class="btn btn-danger">% Pares</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 mx-auto">
+                <div class="alert alert-primary" id="idCard" role="alert">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- my js -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
