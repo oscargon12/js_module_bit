@@ -41,17 +41,30 @@ const getData = () => {
         // Si tds los campos están llenos imprima esto
         document.querySelector('#resultado').innerHTML = `
         <div class="alert alert-success" role="alert">
-            <h3>Carnet generado</h3>
+            <h4>Carnet generado</h4>
             <hr class="dropdown-divider">
-            <h4>Nombre: ${name}</h4>
-            <h4>Apellido: ${lastName}</h4>
-            <h4>Edad: ${age}</h4>
-            <h4>Tipo de sangre: ${blood}</h4>
-            <h4>RH: ${rh}</h4>
-            <h4>Teléfono: ${phone}</h4>
+            <h5>Nombre: ${name}</h5>
+            <h5>Apellido: ${lastName}</h5>
+            <h5>Edad: ${age}</h5>
+            <h5>Tipo de sangre: ${blood}</h5>
+            <h5>RH: ${rh}</h5>
+            <h5>Teléfono: ${phone}</h5>
         </div>`
 
-        setData();
+        // == Creando las tarjetas (test) ==
+        document.querySelector('#cardContainer').innerHTML += `
+        <div class="col-12 col-md-4">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">${name} ${lastName}</div>
+                <div class="card-body">
+                    <h5 class="card-title">${age} años</h5>
+                    <p class="card-text">Sangre: ${blood} ${rh}</p>
+                    <p class="card-text">Telefono: ${phone}</p>
+                </div>
+            </div>
+        </div>
+        `
+
     }
     else { // Si no, imprima la alerta
         document.querySelector('#resultado').innerHTML = `
@@ -63,23 +76,5 @@ const getData = () => {
     }
 }
 
-// == Creando las tarjetas (test) ==
-const setData = () => {
 
-    const cardArray = [];
-    let userInfo = `
-            <div class="col-12 col-md-4">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">${name} ${lastName}</div>
-                    <div class="card-body">
-                        <h5 class="card-title">${age} años</h5>
-                        <p class="card-text">Sangre: ${blood} ${rh}</p>
-                        <p class="card-text">Telefono: ${phone}</p>
-                    </div>
-                </div>
-            </div>`
-
-        cardArray.push(userInfo);
-        console.log(userInfo);
-}
 
