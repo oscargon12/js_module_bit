@@ -34,6 +34,6 @@ const primeNum = (num) => {
 };
 
 // Recibiendo la promesa...
-primeNum(2)
+primeNum(5)
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
