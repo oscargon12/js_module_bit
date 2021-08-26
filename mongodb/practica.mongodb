@@ -1,0 +1,38 @@
+// Ejercicio Query para filtrar 
+
+/* 
+1 Buscar toda la informacion del pokemon que como nombre tenga
+
+{name: <nombre pokemon>}
+1. "Snorlax"
+2. "Dratini"
+3. "Charmander"
+4. "Magikarp"
+
+2 Buscar toda la informacion de los pokemones con los siguientes id
+{id: <id del pokemon>}
+1. "025"
+2. "035"
+3. "123"
+4. "151"
+
+Restricciones
+Se deben usar las comparaciones vistas en clas
+Avanzados
+Debe traer todos los elementos de cada uno de los cuatro puntos usando conectores de condiciones
+Sacar toda la info en un solO COMANDO. */
+
+
+db.pokeData.find(
+    {$or: 
+    [{name: {$eq: "Snorlax"}},
+    {name: {$eq: "Dratini"}},
+    {name: {$eq: "Charmander"}},
+    {name: {$eq: "Magikarp"}},
+    {id: {$eq: "025"}},
+    {id: {$eq: "035"}},
+    {id: {$eq: "123"}},
+    {id: {$eq: "151"}}
+     ]},
+     {name: 1, _id: 0, id: 1}
+).sort({name: 1}).pretty()
